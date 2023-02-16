@@ -1,0 +1,213 @@
+import random
+ekologia=50
+nast_lud=50
+armia=50
+ekonomika=50
+zxc=0
+abc=15
+qwe=[]
+for i in range(16):
+  qwe.append(i)
+def akt():
+  global ekologia,nast_lud,armia,ekonomika,abc,qwe
+  if ekologia>0 and nast_lud>0 and armia>0 and ekonomika>0:  
+    d = qwe[random.randint(0, abc)]
+    
+    if d==0:
+      print("Zolnierzy w niektorychczesciach kraju jest po prostu za duzo. Wiekszosc z nich tylko siedzi bezczynnie w bazach. Moglibysmy obciac wojskowe fundusze i zredukowac liczbe rekrutow.")
+      a = input("1)Zmniejszymy wydatki 2)Nie, wszystko jest w porzadku \n(1/2)")
+      if a == '1':
+        armia-=40
+        ekonomika+=20
+      elif a == '2':
+        nast_lud-=20
+        armia+=20
+    if d==1:
+      print("Wyglada na to ze niektorzy z naszych zolnierzy szmugluja bron z mafia. Czy powinnismy interweniowac?")
+      a = input("1)tak 2)nie \n(1/2)")
+      if a=='1':
+        nast_lud+=20
+        armia-=20
+      elif a=='2':
+        nast_lud-=20
+        armia+=20
+        ekonomika-=20
+    if d==2:
+      print("W kraju odkryto zloza ropy naftowej")
+      a = input("1)Kraj jest bogaty 2)Jestem bogaty \n(1/2)")
+      if a == '1':
+        ekonomika+=50
+      elif a=='2':
+        ekonomika-=50;
+    if d==3:
+      print("Armia jest slaba, a populacja jest leniwa. Powinnismy przywrocic pobor.")
+      a = input("1)Tak 2)Nie \n(1/2)")
+      if a == '1':
+        nast_lud-=40
+        armia+=40
+      elif a=='2':
+        nast_lud+=20
+        armia-=20
+        
+    if d==4:
+      print("Grupa inzynierow genetycznych chcialaby przeprowadzic eksperementy na ziarnie, chca wzmocnic jego odpornosc.")
+      a = input("1)Zezwalam 2)Nie ma mowy \n(1/2)")
+      if a == '1':
+        ekologia+=20
+        ekonomika-=20
+      elif a=='2':
+        nast_lud-=20
+    if d==5:
+      print("Musimy zwiekszyc budzet wojskowy.")
+      a = input("1)Tak 2)Nie \n(1/2)")
+      if a == '1':
+        ekonomika-=20
+        armia+=15
+      elif a=='2':
+        ekonomika+=15
+        armia-=20
+    if d==6:
+      print("W internecie jestes wysmiejewany i krytykowany. Ukarac winnych?")
+      a = input("1)Tak 2)Nie \n(1/2)")
+      if a == '1':
+        nast_lud-=15
+        ekonomika+=15
+      elif a=='2':
+        nast_lud+=10
+        ekonomika-=10
+    if d==7:
+      print("Musimy zwiekszyc budzet wojskowy.")
+      a = input("1)Tak 2)Nie \n(1/2)")
+      if a == '1':
+        armia+=15
+        ekonomika-=20
+      elif a=='2':
+        armia-=20
+        ekonomika+=15
+    if d==8:
+      print("W sasiednim kraju nauka jest bardziej rozwinieta, poniewaz tam dozwolone sa eksperymenty na ludziach. Musimy zrobic to samo!")
+      a = input("1)Swietny pomysl 2)To barbarzynstwo  \n(1/2)")
+      if a == '1':
+        ekologia-=15
+        ekonomika+=20
+      elif a=='2':
+        nast_lud+=15
+        ekonomika-=15
+    if d==9:
+      print("Kraje zachodnie inwestuja w zbrojenia. Uderzmy prewencyjnie!")
+      a = input("1)Do broni 2)Bez paniki \n(1/2)")
+      if a == '1':
+        nast_lud-=15
+        armia-=20
+      elif a=='2':
+        nast_lud+=15
+        armia-=15
+    if d==10:
+      print("Mamy mala i slaba armie. Potrzebujemy nowych rekrutow.")
+      a = input("1)Tak 2)Nie \n(1/2)")
+      if a == '1':
+        armia+=15
+        ekonomika-=15
+      elif a=='2':
+        nast_lud+=15
+        armia-=15
+    if d==11:
+      print("Testy broni jadrowej moga znacznie przyspieszyc nauke.")
+      a = input("1)Prawda 2)To jest niebezpieczne \n(1/2)")
+      if a == '1':
+        ekologia-=31
+        nast_lud-=15
+        ekonomika+=20
+      elif a=='2':
+        ekologia+=15
+        nast_lud+=10
+        ekonomika-=15
+    if d==12:
+      print("Musimy otworzyc ambasady w sasiednich krajach. Zmniejszy to prawdopodobienstwo wojen.")
+      a = input("1)Dobry pomysl 2)Nie \n(1/2)")
+      if a == '1':
+        armia+=15
+        ekonomika-=20
+      elif a=='2':
+        armia-=20
+        ekonomika+=10
+    if d==13:
+      print("Ostra zima nawiedzila kraje polnocno-wschodnie. Potrzebuja pomocy finansowej.")
+      a = input("1)Pomoc  2)To nie jest nasza sprawa  \n(1/2)")
+      if a == '1':
+        nast_lud+=15
+        ekonomika-=20
+      elif a=='2':
+        nast_lud-=5
+        armia-=15
+        ekonomika+=10
+    if d==14:
+      print("Nasza armia moze byc nieskuteczna w przypadku wojny. Zbudujmy bron jadrowa!")
+      a = input("1)Tak 2)Nie \n(1/2)")
+      if a == '1':
+        ekologia-=31
+        nast_lud-=15
+        armia+=31
+        ekonomika-=15
+      elif a=='2':
+        nast_lud+=15
+        armia-=15
+    if d==15:
+      print("Ludnosc prosperuje, a rzad potrzebuje pieniedzy. Podniesmy podatki!")
+      a = input("1)Podnieś trochę  2)Podwój  \n(1/2)")
+      if a == '1':
+        ekonomika+=10
+      elif a=='2':
+        nast_lud-=15
+        ekonomika+=20
+    
+    if ekonomika>100:
+      ekonomika=100
+    if ekologia>100:
+      ekologia=100
+    if nast_lud>100:
+      nast_lud=100
+    if armia>100:
+      armia=100
+def smierc(a,b,c,d):
+  global zxc, ekologia, ekonomika, nast_lud, armia
+  
+  if a<=0:
+    a=0
+    print(f"🌳={a}, 👨‍👦‍👦={b}, 🔫={c}, 💲={d}")
+    print("Wszystcy ludzie, lacznie z toba, zmutowali. Umierasz w agonii")
+    zxc=0
+  elif b<=0:
+    b=0
+    print(f"🌳={a}, 👨‍👦‍👦={b}, 🔫={c}, 💲={d}")
+    print("Po gwaltownej rewolucie zostajesz pojmany i poddany publicznej egzekucji.")
+    zxc=0
+  elif c<=0:
+    c=0
+    print(f"🌳={a}, 👨‍👦‍👦={b}, 🔫={c}, 💲={d}")
+    print("Wrogowie przejeli wladze w kraju. Wraz z resztkami armii wpadasz w zasadzke i giniesz")
+    zxc=0
+  elif d<=0:
+    d=0
+    print(f"🌳={a}, 👨‍👦‍👦={b}, 🔫={c}, 💲={d}")
+    print("Twoja glowa zostaje sprzedana wrogim krajom, a rzad przechodzi w rece politykow")
+    zxc=0
+    ekologia=100
+    nast_lud=100
+    armia=100
+    ekonomika=100
+
+#def kakisz():
+  
+while True:
+  if zxc==0:
+    act=input("Zeby rozpociac napisz \'start\'...\n")
+    if act!="start":
+      print("Sprobuj ponownie\n")
+    elif act=="start":
+      print("Jestes prezydentem kraju, twoim zadaniem jest wytrzymac tak dlugo, jak to mozliwe. Masz 4 wskazniki: ekologia, nastawienie ludzi, armia, budzet panstwa. koniecznie jest, aby zadnego z nich nie doprowadzic do zera")
+      zxc=1
+  elif zxc==1:
+    print(f"🌳={ekologia}, 👨‍👦‍👦={nast_lud}, 🔫={armia}, 💲={ekonomika}")
+    akt()
+    smierc(ekologia,nast_lud,armia,ekonomika)
